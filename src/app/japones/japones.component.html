@@ -1,0 +1,25 @@
+<body style=" margin: auto;">
+    <div style="padding: 50px;" class="central">
+        <div class="inicio central">
+            <div class="center_center">
+                <div class="div_porcoes">
+                    <div *ngFor="let chinesa of chinesas; index as chinesaId">
+                        <div class="imagem_porcao">
+                            <img src="{{chinesa.imagem}}" alt="">
+                        </div>
+                        <span>R$</span>
+                        <h1>{{chinesa.price}}</h1>
+                        <div class="descricao_botao">
+                            <h3>
+                                <a [title]="chinesa.name + ' details'" [routerLink]="['/chinesas', chinesaId]">
+                                    <button>{{chinesa.name}}</button>
+                                </a>
+                            </h3>
+                            <!-- . . . -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
